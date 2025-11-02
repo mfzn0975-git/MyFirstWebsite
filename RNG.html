@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blue;   
+        }
+        h2,input,button {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Random Number Generator</h1>
+    <h2 id="nd">_ _ _ _</h2>
+    <input type="number" id="min" placeholder="0"></input>
+    <input type="number" id="max" placeholder="0"></input><br>
+    <button id="generate">Generate Random Number</button><br>
+    <button id="copy">Copy</button><br>
+    <button id="reset">Reset</button>
+    <script>
+    const nd = document.getElementById("nd");
+    const btn = document.getElementById("generate"); 
+    const cbtn = document.getElementById("copy");
+    const rbtn = document.getElementById("reset");
+    btn.addEventListener("click", function() {
+    let min = Number(document.getElementById("min").value); 
+    let max = Number(document.getElementById("max").value);
+    let rn = Math.floor(Math.random() * (max-min + 1)) + min; 
+    nd.textContent = rn;   });
+    cbtn.addEventListener("click" , function() {
+    navigator.clipboard.writeText(nd.textContent);    
+    })
+    rbtn.addEventListener("click" , function() {
+    nd.textContent =  "_ _ _ _";
+    })
+    </script>
+</body>
+</html> 
