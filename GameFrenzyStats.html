@@ -41,13 +41,6 @@
             padding: 20px 55px;
             font-size: 100%;
         }
-        #home {
-            position: fixed;
-            bottom: 20px; 
-            float: left;
-            padding: 20px 55px;
-            font-size: 100%;
-        }
     </style>
 </head>
 <body>
@@ -59,14 +52,12 @@
     <h2 id = "views">33,408 Views</h2>
     <h2 id = "videos">70 Videos</h2>
     <button id = "light-mode"><h2>Light</h2></button>
-    <a href="https://mfzn0975-git.github.io/Faizans-Website/"><button id = "home">Home</button></a>
 <script>
-const button = document.getElementById('light-mode');
+const btn = document.getElementById('light-mode');
 const head1 = document.getElementById('name');  
 const head2 = document.getElementById('subscribers');
 const head3 = document.getElementById('views');
 const head4 = document.getElementById('videos');
-const btn = document.getElementById('light-mode');
 const img = document.querySelector('img');
 button.addEventListener('click', () => {
     if (document.body.style.backgroundColor === "white") {
@@ -90,6 +81,7 @@ button.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
